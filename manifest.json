@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Mysnu popup Ignore",
+    "description": "Ignore Mysnu popup",
+    "version": "1.0",
+    "author" : "Oleneyl",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    
+    "content_scripts" : [{
+        "all_frames" : true,
+        "js" : ["contentscript.js"],
+        "matches" : ["http://my.snu.ac.kr/mysnu/"],
+        "run_at" : "document_end"
+    }],
+    
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
+    
+}
